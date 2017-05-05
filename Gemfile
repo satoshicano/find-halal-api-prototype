@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'carrierwave', '~> 1.0'
+gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

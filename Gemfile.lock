@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: c952306966c9bae4438e4d40351561af3d8005c0
+  specs:
+    annotate (2.7.0)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 12.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,6 +55,10 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
+    carrierwave (1.1.0)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     concurrent-ruby (1.0.5)
     erubi (1.6.0)
     execjs (2.7.0)
@@ -103,7 +115,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (12.0.0)
+    rake (11.3.0)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
@@ -150,8 +162,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   bootstrap (~> 4.0.0.alpha6)
   byebug
+  carrierwave (~> 1.0)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
