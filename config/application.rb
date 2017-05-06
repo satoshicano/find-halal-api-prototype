@@ -16,5 +16,6 @@ module FindHalalApiPrototype
     config.load_defaults 5.1
     config.generators.system_tests = nil
     config.autoload_paths += %W[#{config.root}/lib]
+    config.read_encrypted_secrets = true
   end
 end
