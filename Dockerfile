@@ -6,6 +6,7 @@ RUN apt-get update -qq && \
   build-essential \
   nodejs \
   libpq-dev \
+  vim-nox \
   libfontconfig1 && \
   rm -rf /var/lib/apt/lists/*
 
