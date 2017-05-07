@@ -12,11 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :picture_image %>
+    <%= form.file_field :image, id: :picture_image, class: 'form-control-file' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value: 'check', class: 'btn btn-primary' %>
   </div>
 <% end %>

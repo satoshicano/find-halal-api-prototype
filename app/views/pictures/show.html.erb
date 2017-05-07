@@ -2,7 +2,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @picture.image.to_s %>
+  <%= image_tag @picture.image.to_s, class: "img-thumbnail" %>
 </p>
 
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
