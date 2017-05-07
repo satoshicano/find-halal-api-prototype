@@ -7,6 +7,7 @@ RUN apt-get update -qq && \
   nodejs \
   libpq-dev \
   vim-nox \
+  libmagickwand-dev \
   libfontconfig1 && \
   rm -rf /var/lib/apt/lists/*
 
