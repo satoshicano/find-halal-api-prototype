@@ -30,6 +30,9 @@ FrozenStringLiteralComment:
 OrderedGems:
   Enabled: false
 
+LineLength:
+  Enabled: false
+
 AllCops:
   Exclude:
     - db/schema.rb
