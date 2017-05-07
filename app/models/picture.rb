@@ -23,7 +23,7 @@ class Picture < ApplicationRecord
       desc.each do |d|
         # return false if d.downcase.include?(halal_word)
         if d.downcase.include?(halal_word)
-          Vision.translate_annotate(halal_word)
+          Vision.new(image.path).translate_annotate(halal_word)
           return false
         end
       end

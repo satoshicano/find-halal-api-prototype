@@ -35,7 +35,7 @@ class Vision
     result['textAnnotations'].map { |text| text['description'] }
   end
 
-  def self.translate_annotate(word)
+  def translate_annotate(word)
     image = Magick::ImageList.new(@file_path)
     draw = Magick::Draw.new
     draw.annotate(image, 100, 200, 300, 400, word)
