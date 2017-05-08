@@ -8,6 +8,7 @@ RUN apt-get update -qq && \
   libpq-dev \
   vim-nox \
   libmagickwand-dev \
+  ghostscript \
   libfontconfig1 && \
   rm -rf /var/lib/apt/lists/*
 
