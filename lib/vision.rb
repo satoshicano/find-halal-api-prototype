@@ -4,7 +4,7 @@ class Vision
   attr_accessor :endpoint, :file_path
 
   def initialize(file_path)
-    key = FindHalalApiPrototype::Application.secrets[:api_key]
+    key = Rails.application.secrets[:api_key]
     @endpoint = "https://vision.googleapis.com/v1/images:annotate?key=#{key}"
     @file_path = file_path
   end

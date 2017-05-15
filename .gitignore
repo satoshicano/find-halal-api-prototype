@@ -20,3 +20,5 @@ public/uploads
 
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
+
+vendor/bundle
