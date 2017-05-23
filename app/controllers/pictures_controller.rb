@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  protect_from_forgery except: %i[create create_from_android]
   before_action :set_picture, only: %i[show edit update destroy]
 
   # GET /pictures
@@ -26,8 +27,21 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     result = @picture.check_halal
-    # @status = result[:status]
-    # @descriptions = result[:descriptions][0..4]
+
+    respond_to do |format|
+      if @picture.save
+        format.html { redirect_to @picture, notice: result[:status] }
+        format.json { render :show, status: :created, location: @picture }
+      else
+        format.html { render :new }
+        format.json { render json: @picture.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def create_from_android
+    @picture = Picture.new(image: params[:image])
+    result = @picture.check_halal
 
     respond_to do |format|
       if @picture.save
