@@ -43,11 +43,10 @@ class PicturesController < ApplicationController
     @picture = Picture.new(image: params[:image])
     result = @picture.check_halal
 
-      if @picture.save
-        render json: { image: @picture.path, result: result }
-      else
-        render json: @picture.errors, status: :unprocessable_entity
-      end
+    if @picture.save
+      render json: { image: @picture.path, result: result }
+    else
+      render json: @picture.errors, status: :unprocessable_entity
     end
   end
 
