@@ -43,13 +43,10 @@ class PicturesController < ApplicationController
     @picture = Picture.new(image: params[:image])
     result = @picture.check_halal
 
-    respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: result[:status] }
-        format.json { render :show, status: :created, location: @picture }
+        render json: { image: @picture.path, result: result }
       else
-        format.html { render :new }
-        format.json { render json: @picture.errors, status: :unprocessable_entity }
+        render json: @picture.errors, status: :unprocessable_entity
       end
     end
   end
