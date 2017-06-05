@@ -48,7 +48,6 @@ class PicturesController < ApplicationController
       else
         render json: @picture.errors, status: :unprocessable_entity
       end
-    end
   end
 
   # PATCH/PUT /pictures/1
