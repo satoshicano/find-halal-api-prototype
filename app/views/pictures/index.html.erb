@@ -16,7 +16,7 @@
     <% @pictures.each do |picture| %>
       <tr>
         <th scope="row"><%= picture.id %></th>
-        <td><%= image_tag picture.image.to_s, class: "img-thumbnail" %></td>
+        <td><%= image_tag picture.image.url, class: "img-thumbnail" %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
