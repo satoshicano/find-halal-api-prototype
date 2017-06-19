@@ -44,7 +44,7 @@ class PicturesController < ApplicationController
     result = @picture.check_halal
 
     if @picture.save
-      render json: { image: @picture.image.url, result: result }
+      render json: { image: @picture.image.url, result: result[:status] }
     else
       render json: @picture.errors, status: :unprocessable_entity
     end
