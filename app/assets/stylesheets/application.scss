@@ -1,9 +1,7 @@
-@import "bootstrap";
-
-.template {
-  padding: 4rem 1.5rem;
-  text-align: center;
-}
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("yellow", "base") !default;
+@import 'materialize';
 
 .img-thumbnail {
   max-width: 30%;

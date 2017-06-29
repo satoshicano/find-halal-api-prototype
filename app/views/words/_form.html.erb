@@ -1,27 +1,13 @@
 <%= form_with(model: word, local: true) do |form| %>
-  <% if word.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(word.errors.count, "error") %> prohibited this word from being saved:</h2>
-
-      <ul>
-      <% word.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
+  <div class="input-field">
+    <%= form.label 'Japanese' %>
     <%= form.text_field :name, id: :word_name %>
   </div>
 
-  <div class="field">
+  <div class="input-field">
     <%= form.label :english %>
     <%= form.text_field :english, id: :word_english %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="commit">Save</button>
 <% end %>

@@ -32,10 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
+gem 'materialize-sass'
 gem 'carrierwave', '~> 1.0'
 gem 'annotate', git: 'https://github.com/ctran/annotate_models.git'
 gem 'httpclient'
