@@ -2,7 +2,9 @@
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("yellow", "base") !default;
 @import 'materialize';
-
+.container {
+  padding-top: 60px;
+}
 .img-thumbnail {
   max-width: 30%;
 }

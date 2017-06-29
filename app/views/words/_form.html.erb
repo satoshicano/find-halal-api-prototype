@@ -1,11 +1,11 @@
 <%= form_with(model: word, local: true) do |form| %>
   <div class="input-field">
-    <%= form.label 'Japanese' %>
+    <%= form.label 'Japanese', class: 'active' %>
     <%= form.text_field :name, id: :word_name %>
   </div>
 
   <div class="input-field">
-    <%= form.label :english %>
+    <%= form.label :english, class: 'active' %>
     <%= form.text_field :english, id: :word_english %>
   </div>
 
