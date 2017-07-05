@@ -14,9 +14,9 @@ class Vision
     content = Base64.strict_encode64(File.new(file_path, 'rb').read)
     response = http_client.post_content(endpoint, request_json(content), 'Content-Type' => 'application/json')
     no_halal_foods = fetch_no_halal_food(response)
-    return { status: '0' } if no_halal_foods.empty?
+    return { status: 'Halal Food' } if no_halal_foods.empty?
     annotate_no_halal_food(no_halal_foods)
-    { status: '1' }
+    { status: 'no Halal Food' }
   end
 
   def request_json(content)
