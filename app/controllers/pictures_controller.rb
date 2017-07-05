@@ -27,6 +27,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     result = @picture.check_halal
+    @picture.status = result[:status]
 
     respond_to do |format|
       if @picture.save
