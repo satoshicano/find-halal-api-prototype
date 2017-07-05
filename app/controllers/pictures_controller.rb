@@ -42,6 +42,7 @@ class PicturesController < ApplicationController
   def create_from_android
     @picture = Picture.new(image: params[:image])
     result = @picture.check_halal
+    @picture.status = result[:status]
 
     if @picture.save
       render json: { image: @picture.image.url, result: result[:status] }

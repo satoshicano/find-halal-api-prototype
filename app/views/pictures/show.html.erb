@@ -1,9 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @picture.image.to_s, class: "img-thumbnail" %>
-</p>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+<p><%= @picture.status %></p>
+<%= image_tag @picture.image.to_s, class: "img-thumbnail" %>
