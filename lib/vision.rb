@@ -61,14 +61,16 @@ class Vision
   def draw_annotate(image, vertices, word)
     draw = Magick::Draw.new
     draw.fill('#FFA500')
-    draw.rectangle(vertices[:x1]-20, vertices[:y1]-20, vertices[:x2]+60, vertices[:y2]+20)
+    draw.opacity('70%')
+    draw.rectangle(vertices[:x1], vertices[:y1], vertices[:x2], vertices[:y2])
     draw.draw(image)
 
     draw = Magick::Draw.new
     font = 'DejaVu-Sans'
-    draw.annotate(image, vertices[:width], vertices[:height], vertices[:x3], vertices[:y3], word) do
+    draw.annotate(image, vertices[:width], vertices[:height], vertices[:x3], vertices[:y3]+30, word) do
       self.font = font
-      self.pointsize = 86
+      self.fill = "red"
+      self.pointsize = 100
     end
   end
 
